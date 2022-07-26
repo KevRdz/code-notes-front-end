@@ -33,7 +33,10 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route path='/notes' element={<AddNote />}/>
+        <Route 
+          path='/notes' 
+          element={<AddNote />}
+        />
         <Route path='/sceenshots'/>
         <Route
           path="/login"

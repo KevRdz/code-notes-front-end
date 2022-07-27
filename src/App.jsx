@@ -13,6 +13,11 @@ import './App.css'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [notes, setNotes] = useState([])
+
+  const handleAddNote = newNoteData => {
+    setNotes([...notes, newNoteData])
+  }
 
   const handleLogout = () => {
     authService.logout()
@@ -35,9 +40,8 @@ const App = () => {
         />
         <Route 
           path='/notes' 
-          element={<AddNote />}
+          element={<AddNote handleAddNote={handleAddNote}/>}
         />
-        <Route path='/sceenshots'/>
         <Route
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}

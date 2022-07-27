@@ -34,7 +34,7 @@ const AddNote = (props) => {
     <>
       <h1>Add A Note</h1>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        <div>
+        <div className={styles.form}>
           <label htmlFor="topic-input">
             Topic:
           </label>
@@ -62,7 +62,7 @@ const AddNote = (props) => {
         <div>
           <button 
             type="submit"
-            // disabled={isFormInvalid}
+            disabled={isFormInvalid}
           >
             Add Note
           </button>
